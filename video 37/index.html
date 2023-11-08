@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Exercise 5 - Design this Layout</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&family=Roboto:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: pink;
+            height: 45px;
+            position: sticky;
+            top: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px -2px 20px 0px;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: flex-end;
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+            flex-direction: row;
+            justify-content: space-evenly;
+            position: sticky;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            padding: 25px;
+        }
+
+        .c {
+            background-color: green;
+            width: 97.3vw;
+            height: 90vh;
+            margin: 10px;
+        }
+
+        .box {
+            background-color: red;
+            width: 45vw;
+            height: 83vh;
+            margin: 21px;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width:1206px) {
+            .box1 {
+                margin-right: 0px;
+            }
+        }
+
+        .box1 {
+            background-color: rgb(255, 131, 172);
+        }
+
+        .box2 {
+            background-color: rgb(55, 68, 252);
+        }
+
+        .a {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .text {
+            font-size: 40px;
+            border: 2px solid #b9b9b9;
+            padding: 50px;
+            border-radius: 50px;
+            font-family: 'Playpen Sans', cursive;
+            background-color: whitesmoke;
+        }
+
+        .logo {
+            width: 46px;
+            height: 46px;
+            border-radius: 100%;
+            background-color: red;
+            display: block;
+            bottom: 0;
+            margin: 10px;
+            position: fixed;
+            box-shadow: 0px 0px 8px 0px;
+        }
+
+        .l {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .foter {
+            height: 85px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b7b7b7;
+            margin-top: 100px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+        }
+    </style>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -17,8 +129,17 @@
         <div class="box box1"></div>
         <div class="box box2"></div>
     </div>
+    <div class="l">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAbFBMVEX/AAD/////2Nj/FRX/5+f/fn7/e3v/7e3//Pz/g4P/nZ3/ERH/JCT/KSn/ysr/4OD/wMD/9fX/VFT/lZX/YGD/SEj/Ly//Zmb/kJD/z8//uLj/sbH/ODj/HR3/ra3/CQn/bm7/iYn/pKT/QkKzeBgXAAAEyklEQVR4nM2c65qCIBCGx0NhZp46l9ph7/8eF23bMj9EFJPvT8+WOW8CwzADS1YfMTs+r+eb7c650MXZbTfz9Tm2Wa97kbrx8z4LCCnI9oU6hhKBx4p9Bo2/xCmYNxJB4qcS60+lfqKfwDt1Nf8Hcer6ILoRuP5KyX6ple9qI2CLXNl+qXzRpVvKCZJDL/MPHeQdQkbg+QPsl/Jl/UFCEO4GAhDtwgEEyWyw/VKz1qZoIwgdLQBEy7bHICbwFprsl1qIe4OQIFLzQDKlkSrBsZ8LECs/qhGcNNsvdVIhWI8AQLTuTqBnEDY160owHwmAaN6NYDwAiNAkGKsJHmo2RINgnE74UqM7fhKMMQzr+hyUHwTH0QGIjm0EkW5PiJRHYgJP71wgUuoJCXTOhm1aiAjCLwEQhZgg0RWQyOUkkGBcV1TXDBF8rw1KhU0Cb3hUrKKd1yAYui5Qlf9JkCh9/bJ0nDwPgmBVir/mueMsL0r3SD4IJEuzLL0uDvfiFMdxGIZH27ajKHJdl5Xir/wv/t4xDPkFp/N9fbtufiRAhzoBE1yWHorQVUpI1MTskz/HCRciViPA3vCmlg0RyLNxzLN4J3DRjLQThvjKslH6IXffCNBA2Or4/U8lW2DBfxF4APFHJwA3ATJgK++fAAVG+prgoQjYOP0TgLDgphnAsm5NI+mTAHmjblkoFdnASvJHAPphph3AskBn8x8EKDbDS7xhQs3gVQTIH8YjEMTADqsICvCJPQIBWgkUFcG++cGuX6K+XS6IQPYlAQO+YjsCgOUBv5gxToBGSToGAXI7vLnJOoP396MQgOamMydA79+kd2M9vDaKgvacABVN7tK72U6HpPWH7sBSZhFDIYwg7fVOcKGd/Kq60AQYMEIdkSTJ6JJgyS9L1dwGXJHYhDxVB4dUERBdVWYw+GNjQkOhQ3DwR0C5QlELhQjcPswbdSfgfanzHAIJ1gTjWPmzfREQbTp2BxeZmtNmOAG/Tad5BBJsCAWxS1UCCooO3YGhBMWW0JI5l/+kDwJ+J/kIZnBVQogr6EHAHazsyUHn5xBaX/Yj4Ouw9u8xtHLC69tVTwLKWh8Dw0kSnc9g3t4Ogmegrx+Ii1lPAtwPdI2FH7lrFIwFPf4gv3fwBy5qua0en3gd4hPhvKAyM3UPE+DMNDdgbhwaH6wHxwfTx0iD4kRRLRlLECd+MVZGDc5j5S+uF1DGLhOsmQ7Su/VZM4EURrVmmn7dOP3a+Xv5g5+moSp/MH0OBeWRLt/NI02fS5s+n/itnCroBn851S/lldHM+Mwro4Eq94qqAlmk/9w6TK/ofggoRHvVF75RYwER8VuNBdeZlOe+NgAUEL/VmQS1Nn1uKUIhQK3WJqg3ziIt9UZ2g8vTWr1RWHPNbvfY7t8cnhsWB9HmlnrNVVZ3Drb7+c0vzo/Cc0vduSo8F/fD7JpKthN81J0NqL1Pv//AgD0Y0+9DMWAvjgH7kabfk2XAvjQD9uZNvz/RgD2aBuxTNWCvrgH7lQ3Ys23AvnUD9u4bcH7BgDMcBpxjMeAsjwHnmSyNZ7qcfme6LAPOtVnTn+2zDDjfaE1/xrPU1OdcS0191rfU1OedK0185rvS1OfeH5r27P8bRnxez/T8/4NfM99R+W7CQCYAAAAASUVORK5CYII="
+            alt="YT logo" class="logo">
+    </div>
     <div class="a">
-        <span class="text">Welcome to this Sigma Web Development Express</span>
+        <span class="text">Welcome to this Sigma Web
+            Development Express</span>
+    </div>
+    <div class="foter">
+        <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit.</footer>
     </div>
 </body>
+
 </html>

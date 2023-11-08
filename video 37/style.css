@@ -1,13 +1,25 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;400&family=Roboto:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
 }
 
-nav{
+nav {
     background-color: pink;
     height: 45px;
+    position: sticky;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px -2px 20px 0px;
 }
-nav ul{
+
+nav ul {
     display: flex;
     align-items: flex-end;
     padding: 0px;
@@ -15,20 +27,22 @@ nav ul{
     border: 0px;
     flex-direction: row;
     justify-content: space-evenly;
+    position: sticky;
 }
-nav ul li{
+
+nav ul li {
     list-style-type: none;
     padding: 25px;
 }
 
-.c{
+.c {
     background-color: green;
     width: 97.3vw;
     height: 90vh;
     margin: 10px;
 }
 
-.box{
+.box {
     background-color: red;
     width: 45vw;
     height: 83vh;
@@ -36,35 +50,59 @@ nav ul li{
     display: inline-block;
 }
 
-@media only screen and (max-width:1206px){
-    .box1{
+@media only screen and (max-width:1206px) {
+    .box1 {
         margin-right: 0px;
     }
 }
 
-.box1{
+.box1 {
     background-color: rgb(255, 131, 172);
 }
 
-.box2{
+.box2 {
     background-color: rgb(55, 68, 252);
 }
 
-.a{
-    /* align-items: center; */
-    /* justify-content: center; */
-    justify-items: center;
-    background-color: red;
-    /* position: absolute; */
-    /* display: inline-flex; */
-}
-
-.text{
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px;
+.a {
     align-items: center;
     justify-content: center;
-    display: inline-block;
-    margin: 0px 88vh;
-    padding: auto;
+    display: flex;
+}
+
+.text {
+    font-size: 40px;
+    border: 2px solid #b9b9b9;
+    padding: 50px;
+    border-radius: 50px;
+    font-family: 'Playpen Sans', cursive;
+    background-color: whitesmoke;
+}
+
+.logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    background-color: red;
+    display: block;
+    bottom: 0;
+    margin: 10px;
+    position: fixed;
+    box-shadow: 0px 0px 8px 0px;
+}
+
+.l {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.foter {
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b7b7b7;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
 }
