@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify by Amanat</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
 </head>
 
 <body>
     <div class="container flax bg-black">
         <div class="left w-1">
+            <div class="close">
+                <img class="close invert" width="30" src="imgs/close.svg" alt="close">
+            </div>
             <div class="home bg-gray rounded m-1 p-1">
-                <div class="logo invert"><img src="logo.svg" alt="logo"></div>
+                <div class="logo invert"><img src="imgs/logo.svg" alt="logo"></div>
                 <ul>
-                    <li><img class="invert" src="home.svg" alt="home">Home</li>
-                    <li><img class="invert" src="search.svg" alt="search">Search</li>
+                    <li><img class="invert" src="imgs/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="imgs/search.svg" alt="search">Search</li>
                 </ul>
             </div>
             <div class="library bg-gray m-1 rounded p-1">
                 <div class="heading">
-                    <img class="invert" src="playlist.svg" alt="playlist">
+                    <img class="invert" src="imgs/playlist.svg" alt="playlist">
                     <h2>
                         Your library
                     </h2>
@@ -62,7 +65,9 @@
         </div>
         <div class="right bg-gray rounded">
             <div class="header rounded">
-                <div class="nav">
+                <div style="gap: 14px;" class="nav flax item-center">
+                    <img class="hamburger invert" src="imgs/hamburger.svg" alt="hamburger">
+
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
@@ -82,34 +87,7 @@
             <div class="spotifyPlaylists">
                 <h1>Spotify Playlists</h1>
                 <div class="cardContainar">
-                    <div class="card">
-                        <div class="play">
-                            <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#1ed760" stroke-width="1.5" fill="#1ed760" />
-                                <path
-                                    d="M15.4531 12.3948C15.3016 13.0215 14.5857 13.4644 13.1539 14.3502C11.7697 15.2064 11.0777 15.6346 10.5199 15.4625C10.2893 15.3913 10.0793 15.2562 9.90982 15.07C9.5 14.6198 9.5 13.7465 9.5 12C9.5 10.2535 9.5 9.38018 9.90982 8.92995C10.0793 8.74381 10.2893 8.60868 10.5199 8.53753C11.0777 8.36544 11.7697 8.79357 13.1539 9.64983C14.5857 10.5356 15.3016 10.9785 15.4531 11.6052C15.5156 11.8639 15.5156 12.1361 15.4531 12.3948Z"
-                                    stroke="#000" stroke-width="1.5" stroke-linejoin="round" fill="#000" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="lofi beats">
-                        <h2>lofi beats</h2>
-                        <p>chill beats, lofi vibes, new tracks every week... </p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg width="36px" height="36px" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="#1ed760" stroke-width="1.5" fill="#1ed760" />
-                                <path
-                                    d="M15.4531 12.3948C15.3016 13.0215 14.5857 13.4644 13.1539 14.3502C11.7697 15.2064 11.0777 15.6346 10.5199 15.4625C10.2893 15.3913 10.0793 15.2562 9.90982 15.07C9.5 14.6198 9.5 13.7465 9.5 12C9.5 10.2535 9.5 9.38018 9.90982 8.92995C10.0793 8.74381 10.2893 8.60868 10.5199 8.53753C11.0777 8.36544 11.7697 8.79357 13.1539 9.64983C14.5857 10.5356 15.3016 10.9785 15.4531 11.6052C15.5156 11.8639 15.5156 12.1361 15.4531 12.3948Z"
-                                    stroke="#000" stroke-width="1.5" stroke-linejoin="round" fill="#000" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f0000000254473de875fea0fd19d39037" alt="lofi beats">
-                        <h2>lofi beats</h2>
-                        <p>chill beats, lofi vibes, new tracks every week... </p>
-                    </div>
+                    
                 </div>
                 <div class="playbar invert">
                     <div class="seekbar">
@@ -117,24 +95,32 @@
 
                         </div>
                     </div>
-                    <div class="abovebar flax between">
+                    <div class="abovebar flax between m-20-0">
                         <div class="songinfo">
 
                         </div>
                         <div class="songbuttons">
-                            <img id="previous" src="prevsong.svg" alt="prevsong">
-                            <img id="play" src="play.svg" alt="play">
-                            <img id="next" src="nextsong.svg" alt="nextsong">
+                            <img id="previous" src="imgs/prevsong.svg" alt="prevsong">
+                            <img id="play" src="imgs/play.svg" alt="play">
+                            <img id="next" src="imgs/nextsong.svg" alt="nextsong">
                         </div>
-                        <div class="songtime">
-
+                        <div class="timevol">
+                            <div class="songtime">
+    
+                            </div>
+                            <div class="volume">
+                                <img width="25" src="imgs/volume.svg" alt="volume">
+                                <div class="range">
+                                    <input type="range" name="volume" id="volume">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
